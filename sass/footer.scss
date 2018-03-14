@@ -1,0 +1,83 @@
+.footer {
+	background-color: #333;
+	padding: 10rem 0;
+
+	// @include respond(tab-port) {
+	// 	padding: 8rem 0;
+	// }
+
+	&-row {
+		@include respond(tab-land) {
+		max-width: $grid-width !important;
+		text-align: center;
+		padding: 0 5%; 
+	}
+	}
+
+	&-logo-box {
+		text-align: center;
+		margin-bottom: 8rem;
+		
+	}
+
+	&-logo {
+		width: 15rem;
+		height: auto;
+	}
+
+	&-copyright {
+		border-top: 1px solid $color-light-gray;
+		padding-top: 1.5rem;
+		display: inline-block;
+	// 			@include respond(tab-land) {
+	// 	width: 100%;
+	// 	text-align: center;
+	// 	float: none;
+	// }
+	}
+
+	&-navigation {
+		border-top: 1px solid $color-light-gray;
+		display: inline-block;
+		padding-top: 1.5rem;
+
+	// 	@include respond(tab-land) {
+	// 	width: 100%;
+	// 	text-align: center;
+	// }
+	}
+
+	&-list {
+
+
+		list-style: none;
+	}
+
+	&-item {
+		display: inline-block;
+		text-transform: uppercase;
+
+		&:not(:last-child) {
+			margin-right: 1.5rem;
+		}
+	}
+
+	&-link {
+		transition: color .2s;
+		&:visited,
+		&:link {
+			display: inline-block;
+			color: $color-gray-light1;
+			text-decoration: none;
+		}
+		&:hover,
+		&:active {
+			color: $color-primary;
+			text-shadow: 0 2rem 1.6rem rgba(#000,.2);
+
+		}
+
+
+
+	}
+}
